@@ -1,0 +1,12 @@
+{
+    "name":"emb-twitter_timeline",
+    "description":"A web-app that displays Embedded Twitter Timeline for given user",
+    "version":"0.1.0",
+    "author" : "Oleh Kurtianyk",
+    "dependencies" : {
+        "twitter-node-client" : "*",
+        "body-parser": "^1.12.2",
+    	"express": "^4.12.3"
+    },
+    "license": "MIT"
+}
