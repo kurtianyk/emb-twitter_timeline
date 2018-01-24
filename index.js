@@ -3,6 +3,7 @@ module.exports = require('./node_modules/twitter-node-client/lib/Twitter');
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var port = process.env.PORT || 8000;
 
 var error = function (err, response, body) {
     console.log('ERROR [%s]', JSON.stringify(err));
@@ -42,8 +43,9 @@ app.post('/twitter/user', function (req, res) {
 	});
 });
 
-
-var server = app.listen(3000, function () {
-  	var host = server.address().address;
-  	var port = server.address().port;
+app.listen(port, (err) => {
+  if (err) {
+   return console.log(`something bad happened ${err}`);
+ }
+ console.log(`server is listening on ${port}`);
 });

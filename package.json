@@ -3,6 +3,10 @@
     "description":"A web-app that displays Embedded Twitter Timeline for given user",
     "version":"0.1.0",
     "author" : "Oleh Kurtianyk",
+    "main" : "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
     "dependencies" : {
         "twitter-node-client" : "*",
         "body-parser": "^1.12.2",

@@ -1,6 +1,7 @@
 var app = angular.module('myApp', []);
 
 app.controller('myCtrl', function($scope, TwitterService){
+	$scope.word = /^@?(\w){1,15}$/;
 	$scope.getUserTimeline = function(username){
 		console.log("username entered ", username);
 		TwitterService.getUserTimeline(username)
@@ -13,7 +14,7 @@ app.controller('myCtrl', function($scope, TwitterService){
 		        $scope.twitterErrors = error.error;
 		    })
 	}
-  
+
 });
 
 app.factory('TwitterService', function($http, $q){
